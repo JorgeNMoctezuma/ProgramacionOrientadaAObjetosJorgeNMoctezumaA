@@ -6,28 +6,28 @@ import java.util.Scanner;
 
 public class CLI {
 
-    public static  void mostrarMenu(){
+    public static void mostrarMenu() {
         System.out.println("Elige una opción: \n1.- Sumar \n2.- Restar \n3.- Multiplicar \n4.- Dividir");
 
         Scanner scanner = new Scanner(System.in);
 
-        int option = scanner.nextInt();scanner.nextLine();
+        int option = scanner.nextInt();
+        scanner.nextLine();
 
-        while (option> 4 || option < 1) {
+        while (option > 4 || option < 1) {
             System.out.println("Por favor ingresa una opción válida");
             System.out.println("\n1.- Sumar \n2.- Restar \n3.- Multiplicar \n4.- Dividir");
             option = scanner.nextInt();
         }
 
         int resultado = -1;
-        String operacion ="";
+        String operacion = "";
 
         System.out.println("Inroduce el primer valor");
-        int num1 = scanner.nextInt();scanner.nextLine();
+        int num1 = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Inroduce el segundo valor");
         int num2 = scanner.nextInt();
-
-
 
 
         switch (option) {
@@ -52,12 +52,10 @@ public class CLI {
                 break;
 
 
-
         }
 
         System.out.printf("El resultado de la opereación es %d %s %d = %d", num1, operacion, num2, resultado);
 
     }
-
 
 }
